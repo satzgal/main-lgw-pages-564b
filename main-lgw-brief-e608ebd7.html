@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>老哥社区 — 说明页</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #f5f9fc;
+      color: #1f2a33;
+      line-height: 1.6;
+      padding: 2rem 1.25rem;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 32px;
+      box-shadow: 0 12px 30px rgba(0, 60, 70, 0.06);
+      padding: 2.5rem 2rem;
+    }
+
+    /* 开场短句 */
+    .opener {
+      font-size: 1.8rem;
+      font-weight: 500;
+      color: #0d5b60;
+      letter-spacing: -0.01em;
+      line-height: 1.3;
+      margin-bottom: 0.75rem;
+    }
+    .opener small {
+      display: block;
+      font-size: 1rem;
+      font-weight: 400;
+      color: #3d6d73;
+      margin-top: 0.4rem;
+    }
+
+    /* 承接段落 */
+    .lead {
+      background: #e7f2f4;
+      padding: 1.6rem 1.8rem;
+      border-radius: 20px;
+      margin: 2rem 0 2.2rem;
+      color: #133e43;
+    }
+    .lead p {
+      margin-bottom: 0.8rem;
+    }
+    .lead p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* 网格卡片 (特点列表) */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.2rem;
+      margin: 2.2rem 0 2.6rem;
+    }
+
+    .feature-card {
+      background: #ffffff;
+      border: 1px solid #d4e6ea;
+      border-radius: 18px;
+      padding: 1.5rem 1.6rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      box-shadow: 0 2px 6px rgba(13, 91, 96, 0.04);
+    }
+    .feature-card:hover {
+      border-color: #1f9da8;
+      box-shadow: 0 6px 14px rgba(13, 91, 96, 0.08);
+    }
+
+    .feature-card h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #07565c;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .feature-card h3::before {
+      content: "▹";
+      color: #1f9da8;
+      font-size: 1.3rem;
+      line-height: 1;
+    }
+    .feature-card p {
+      color: #2b4a50;
+      font-size: 0.96rem;
+    }
+
+    /* 温和结尾 */
+    .gentle-closing {
+      margin-top: 2.2rem;
+      padding: 1.8rem 1.6rem;
+      background: #f0f7f9;
+      border-radius: 20px;
+      text-align: center;
+      border: 1px solid #cde2e6;
+    }
+    .gentle-closing p {
+      max-width: 580px;
+      margin: 0 auto 0.8rem;
+      color: #1d4f55;
+    }
+    .gentle-closing .link-inline {
+      margin-top: 0.25rem;
+    }
+
+    a {
+      color: #12737a;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    a:hover {
+      color: #0a555b;
+      border-bottom-color: #1f9da8;
+    }
+
+    /* 小字提示 */
+    .footnote {
+      margin-top: 2.8rem;
+      font-size: 0.85rem;
+      color: #607e84;
+      text-align: center;
+      border-top: 1px solid #deecf0;
+      padding-top: 1.8rem;
+    }
+
+    /* FAQ 摘要 (简洁) */
+    .faq-brief {
+      margin: 2.5rem 0 1.2rem;
+      padding: 0.2rem 0;
+    }
+    .faq-item {
+      padding: 0.9rem 0;
+      border-bottom: 1px solid #e5eff2;
+    }
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+    .faq-q {
+      font-weight: 600;
+      color: #06454b;
+      margin-bottom: 0.2rem;
+    }
+    .faq-a {
+      color: #2f5b62;
+      font-size: 0.95rem;
+    }
+
+    /* 响应式 */
+    @media (min-width: 560px) {
+      .feature-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (min-width: 768px) {
+      body {
+        padding: 3rem 2.5rem;
+      }
+      .container {
+        padding: 3rem 3rem;
+      }
+      .opener {
+        font-size: 2.2rem;
+      }
+      .lead {
+        padding: 2rem 2.2rem;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .container {
+        padding: 1.6rem 1rem;
+      }
+      .opener {
+        font-size: 1.5rem;
+      }
+      .feature-card {
+        padding: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- 开场短句 -->
+  <div class="opener">
+    这是老哥社区。
+    <small>一个你可以快速判断用途的说明页。</small>
+  </div>
+
+  <!-- 承接段落：从用户想快速识别用途的角度展开 -->
+  <div class="lead">
+    <p>打开一个网站，头几秒往往只想弄清楚两件事：<strong>这里讨论什么？对我有没有用？</strong></p>
+    <p><a href="https://main-lgw.com">老哥社区</a> 并不是一个需要反复猜测的复杂平台。它的定位从一开始就很清楚——围绕特定兴趣与交流需求搭建的固定圈子，内容偏重实用经验、日常话题与互助讨论。没有杂乱的推荐流，也没有强行推送的算法信息。</p>
+    <p>如果你在寻找一个氛围稳定、话题聚焦、且成员之间彼此熟悉的线上空间，那么这里值得你花几分钟了解它的基本面貌。</p>
+  </div>
+
+  <!-- 特点列表（网格卡片） -->
+  <div class="feature-grid">
+    <div class="feature-card">
+      <h3>主题明确</h3>
+      <p>主要围绕少数几个核心话题展开，内容方向清晰。新访客可以很快判断是否与自己的兴趣匹配，而不是在大量无关信息中筛选。</p>
+    </div>
+    <div class="feature-card">
+      <h3>成员氛围</h3>
+      <p>社区内成员彼此有一定辨识度，发言风格和互动习惯相对一致。长期参与者会形成一种自然的社区语言，减少陌生感。</p>
+    </div>
+    <div class="feature-card">
+      <h3>低干扰结构</h3>
+      <p>页面版式强调信息可读性，不依赖弹窗、浮层或过度动态效果。你可以专心阅读帖子与回复，而不被频繁打断。</p>
+    </div>
+    <div class="feature-card">
+      <h3>实用优先</h3>
+      <p>讨论内容往往带有“解决问题”或“分享经验”的倾向。无论是技术向还是生活向，多数帖子都试图提供具体参考价值。</p>
+    </div>
+  </div>
+
+  <!-- FAQ 摘要（温和地补充场景） -->
+  <div class="faq-brief">
+    <div class="faq-item">
+      <div class="faq-q">常见问题：这个社区适合新手吗？</div>
+      <div class="faq-a">适合。只要你对核心主题有兴趣，社区并不排斥新人提问或参与。建议先浏览几篇置顶帖和近期讨论，能更快熟悉讨论风格。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">内容更新频率如何？</div>
+      <div class="faq-a">保持日常活跃，但并非每分钟都有新帖。讨论节奏偏稳健，重要话题往往会持续数天，成员会认真回应。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">是否需要注册才能浏览？</div>
+      <div class="faq-a">部分内容对访客可见，完整参与（发帖、回复、收藏）则需要注册账号。注册流程简单，没有多余验证门槛。</div>
+    </div>
+  </div>
+
+  <!-- 温和结尾 + 自然嵌入链接 -->
+  <div class="gentle-closing">
+    <p>如果你对这样的社区环境感到好奇，或者想确认它是否匹配你的需求，最好的方式就是亲自看一眼。</p>
+    <p class="link-inline">你可以从 <a href="https://main-lgw.com">老哥社区</a> 的首页开始浏览——那里有最新的讨论和板块总览，不需要做任何操作就能感受到社区的基本节奏。</p>
+  </div>
+
+  <!-- 小字脚注 -->
+  <div class="footnote">
+    以上信息基于社区公开内容和常见用户反馈整理。页面描述仅用于帮助新访客快速了解。
+  </div>
+
+</div>
+
+</body>
+</html>
